@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Lista de Personagens</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Clãs</th>
+        <th>Nome</th>
+        <th>Nível de Poder</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="jujutsu : ${jujutsu}">
+        <td th:text="${jujutsu.nome}">Personagem</td>
+        <td th:text="${jujutsu.cla}">Clã</td>
+        <td th:text="${jujutsu.lvlPoder}">Nível de Poder</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
